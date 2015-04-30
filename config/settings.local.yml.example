@@ -1,0 +1,11 @@
+sentry:
+  url:
+
+ad:
+  auth:
+    username: CN=ad_syncinator,OU=Biola Service Accounts,DC=ad,DC=biola,DC=edu
+    password: "**************"
+
+trogdir:
+  access_id: "****************"
+  secret_key: "******************************************************"

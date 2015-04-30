@@ -1,0 +1,56 @@
+version: 1
+
+dn: CN=mickeymouse,OU=Biola Users,DC=ad,DC=biola,DC=edu
+objectClass: user
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: mickeymouse
+instanceType: 4
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=ad,DC=biola,DC=edu
+accountExpires: 0
+badPasswordTime: 129569737897392464
+badPwdCount: 11
+codePage: 0
+countryCode: 0
+department: Disneyland
+description: Mouse, Disneyland - 800001385
+displayName: Mickey Mouse
+distinguishedName: CN=mickeymouse,OU=Biola Users,DC=ad,DC=biola,DC=edu
+dSCorePropagationData: 20150428153345.0Z
+dSCorePropagationData: 20141208191428.0Z
+dSCorePropagationData: 20130521164439.0Z
+dSCorePropagationData: 20130515225928.0Z
+dSCorePropagationData: 16010714223649.0Z
+eduPersonAffiliation: robot
+eduPersonAffiliation: student
+eduPersonAffiliation: alumnus
+eduPersonEntitlement: urn:biola:library:millennium
+eduPersonNickname: Mickey
+eduPersonPrimaryAffiliation: student
+eduPersonPrincipalName: mickey.a.mouse
+employeeID: 800001385
+givenName: Mickey
+lastLogoff: 0
+lastLogon: 0
+lastLogonTimestamp: 130586752853748467
+logonCount: 0
+logonHours:: ////////////////////////////
+mail: mickey.a.mouse@biola.edu
+memberOf: CN=biolastudents,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
+name: mickeymouse
+objectGUID:: fll0M2JYOE2Bw/RnHl0EfQ==
+objectSid:: AQUAAAAAAAUVAAAA3/nhDXlZGe+GRjzzj4AAAA==
+primaryGroupID: 513
+pwdLastSet: 130531266664211486
+sAMAccountName: mickeymouse
+sAMAccountType: 805306368
+sn: Mouse
+title: Mouse
+url: http://dropbox.biola.edu/mickeymouse
+userAccountControl: 512
+uSNChanged: 69454558
+uSNCreated: 142065
+whenChanged: 20141025014815.0Z
+whenCreated: 20100522034134.0Z
+

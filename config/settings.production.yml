@@ -1,0 +1,21 @@
+redis:
+  url: "redis://redis1.prod.biola.edu:6379/0"
+
+ad:
+  base: DC=ad,DC=biola,DC=edu
+  connection:
+    # TODO: confirm settings with sysadmins
+    host: dcmet03.ad.biola.edu
+    port: 636
+    encryption: :simple_tls
+    auth:
+      method: :simple
+      username: # set in settings.local.yml
+      password: # set in settings.local.yml
+
+trogdir:
+  scheme: https
+  host: api.biola.edu
+  port: 443
+  script_name: directory
+  version: v1

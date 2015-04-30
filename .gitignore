@@ -1,0 +1,5 @@
+.bundle
+/config/settings.local.yml
+/config/blazing.rb
+/vendor/bundle
+/tmp

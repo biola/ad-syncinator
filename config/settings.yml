@@ -1,0 +1,42 @@
+redis:
+  url: "redis://localhost:6379/0"
+
+sentry:
+  url: # set in settings.local.yml
+
+ad:
+  base: DC=adtest,DC=biola,DC=edu
+  users_ou: OU=Biola Users,DC=adtest,DC=biola,DC=edu
+  connection:
+    # TODO: confirm settings with sysadmins
+    host: dcdev.adtest.biola.edu
+    port: 636
+    encryption: :simple_tls
+    auth:
+      method: :simple
+      username: # set in settings.local.yml
+      password: # set in settings.local.yml
+
+trogdir:
+  scheme: http
+  host: trogdir-api.dev
+  port:
+  script_name:
+  version: v1
+  access_id: # set in settings.local.yml
+  secret_key: # set in settings.local.yml
+  api_timeout: 300 # 5 min
+
+sync:
+  # Affiliations that should be added/removed
+  # Other affiliations are manually managed and shouldn't be touched
+  # All of the affiliations that banner-syncinator manages should be included in this list
+  affiliations:
+    - accepted student
+    - alumnus
+    - employee
+    - faculty
+    - student
+    - student worker
+    - trustee
+    - volunteer
