@@ -1,4 +1,4 @@
-AD Syncinator
+AD Syncinator [![Build Status](https://travis-ci.org/biola/ad-syncinator.svg)](https://travis-ci.org/biola/ad-syncinator)
 =============
 
 AD Syncinator creates and syncs accounts from [trogdir-api](https://github.com/biola/trogdir-api) into Active Directory.
