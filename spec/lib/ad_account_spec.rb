@@ -28,7 +28,7 @@ describe ADAccount do
 
   describe '#attributes' do
     it 'returns a hash' do
-      expect(subject).to receive(:entry).and_return Net::LDAP::Entry.from_single_ldif_string(File.read('./spec/fixtures/mickeymouse.ldif'))
+      expect(subject).to receive(:entry).at_least(:once).and_return Net::LDAP::Entry.from_single_ldif_string(File.read('./spec/fixtures/mickeymouse.ldif'))
       expect(subject.attributes.keys.sort).to eql [:accountexpires, :badpasswordtime, :badpwdcount, :cn, :codepage, :countrycode, :department, :description, :displayname, :distinguishedname, :dn, :dscorepropagationdata, :edupersonaffiliation, :edupersonentitlement, :edupersonnickname, :edupersonprimaryaffiliation, :edupersonprincipalname, :employeeid, :givenname, :instancetype, :lastlogoff, :lastlogon, :lastlogontimestamp, :logoncount, :logonhours, :mail, :memberof, :name, :objectcategory, :objectclass, :objectguid, :objectsid, :primarygroupid, :pwdlastset, :samaccountname, :samaccounttype, :sn, :title, :url, :useraccountcontrol, :usnchanged, :usncreated, :whenchanged, :whencreated].sort
       expect(subject.attributes[:cn]).to eql ['mickeymouse']
       expect(subject.attributes[:department]).to eql ['Disneyland']
