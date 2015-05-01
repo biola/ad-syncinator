@@ -14,7 +14,7 @@ class TrogdirChange
 
   def has_netid?
     if hash['scope'] == 'person'
-      Array(hash['ids']).any? { |id| id['type'] == 'netid' }
+      Array(hash['all_attributes']['ids']).any? { |id| id['type'] == 'netid' }
     elsif hash['scope'] == 'id' && all_attrs['type'] == 'netid'
       true
     else

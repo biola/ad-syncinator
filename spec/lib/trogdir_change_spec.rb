@@ -44,18 +44,23 @@ describe TrogdirChange do
   describe '#university_email_changed?' do
     it { expect(subject.university_email_changed?).to be false}
   end
+
   describe '#office_phone_changed?' do
     it { expect(subject.office_phone_changed?).to be false}
   end
+
   describe '#biola_id_changed?' do
     it { expect(subject.biola_id_changed?).to be false}
   end
+
   describe '#netid_changed?' do
     it { expect(subject.netid_changed?).to be false}
   end
+
   describe '#id_photo_changed?' do
     it { expect(subject.id_photo_changed?).to be false}
   end
+
   describe '#profile_photo_changed?' do
     it { expect(subject.profile_photo_changed?).to be false}
   end
