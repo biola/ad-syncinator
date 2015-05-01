@@ -24,7 +24,7 @@ class TrogdirChange
 
   [:first_name, :middle_name, :last_name, :preferred_name, :tile, :department, :employee_type].each do |meth|
     define_method "#{meth}_changed?" do
-      changed_attrs.include? meth
+      changed_attrs.include? meth.to_s
     end
   end
 
