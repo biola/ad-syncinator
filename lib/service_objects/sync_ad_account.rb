@@ -11,7 +11,7 @@ module ServiceObjects
         change.middle_name_changed? ||
         change.last_name_changed? ||
         change.preferred_name_changed? ||
-        change.tile_changed? ||
+        change.title_changed? ||
         change.department_changed? ||
         change.employee_type_changed? ||
         change.university_email_changed? ||
