@@ -128,7 +128,7 @@ class ADAccount
     display_name = [person.first_name, person.last_name].reject(&:blank?).join(' ')
     principal_name = person.university_email.to_s.split('@').first
     photo_url = person.profile_photo || person.id_card_photo
-    enabled = ADAccount.disable?(person)
+    enabled = !ADAccount.disable?(person)
     description = person.description
     user_account_control = (DEFAULT_ACCTCONTROL + (enabled ? 0 : ADS_UF_ACCOUNTDISABLE)).to_s
     affiliations = (Array(attributes[:edupersonaffiliation]) - Settings.sync.affiliations + Array(person.affiliations)).uniq.sort
