@@ -2,6 +2,7 @@ redis:
   url: "redis://redis1.prod.biola.edu:6379/0"
 
 ad:
+  users_ou: OU=Biola Users,DC=ad,DC=biola,DC=edu
   base: DC=ad,DC=biola,DC=edu
   connection:
     # TODO: confirm settings with sysadmins
