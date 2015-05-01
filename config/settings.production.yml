@@ -3,7 +3,6 @@ redis:
 
 ad:
   users_ou: OU=Biola Users,DC=ad,DC=biola,DC=edu
-  base: DC=ad,DC=biola,DC=edu
   connection:
     # TODO: confirm settings with sysadmins
     host: dcmet03.ad.biola.edu

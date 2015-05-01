@@ -39,16 +39,7 @@ sync:
     - student worker
     - trustee
     - volunteer
-  # Affiliations and which groups they should be added to
-  groups:
-    employee:
-      - CN=biolaemployees,OU=Biola Security Groups,DC=adtest,DC=biola,DC=edu
-    # This should be uncommented when the faculty emeritus affiliation is in trogdir
-    # faculty emeritus:
-    #   - CN=biolafacultyemeriti,OU=Biola Security Groups,DC=adtest,DC=biola,DC=edu
-    student:
-      - CN=biolastudents,OU=Biola Security Groups,DC=adtest,DC=biola,DC=edu
-    student worker:
-      - CN=biolastudentworkers,OU=Biola Security Groups,DC=adtest,DC=biola,DC=edu
-    trustee:
-      - CN=biolatrustees,OU=Biola Security Groups,DC=adtest,DC=biola,DC=edu
+  # Affiliations and which groups they should be added to.
+  # These are defined in the environment settings files.
+  # They have to be defined that way or the merge will merge the array values together.
+  groups: {}
