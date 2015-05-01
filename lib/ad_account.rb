@@ -58,12 +58,30 @@ class ADAccount
       ldap.add(dn: dn, attributes: ldap_create_attributes(person))
     end
 
+    ldap do |ldap|
+      ADAccount.groups_for(person).each do |group|
+        ldap.modify dn: group, operations: [:add, :member, dn]
+      end
+    end
+
     :create
   end
 
   def update!(person)
     ldap do |ldap|
       ldap.modify(dn: dn, operations: ldap_update_operations(person))
+    end
+
+    ldap do |ldap|
+      old_groups = Array(attributes[:memberof])
+      new_groups = ADAccount.groups_for(person)
+      ADAccount.managed_groups.each do |group|
+        if old_groups.exclude?(group) && new_groups.include?(group)
+          ldap.modify dn: group, operations: [[:add, :member, dn]]
+        elsif old_groups.include?(group) && new_groups.exclude?(group)
+          ldap.modify dn: group, operations: [[:delete, :member, dn]]
+        end
+      end
     end
 
     :update
@@ -88,6 +106,16 @@ class ADAccount
   def self.encode_password(password)
     # See https://msdn.microsoft.com/en-us/library/cc223248.aspx
     %{"#{password}"}.encode('utf-16le').force_encoding('utf-8')
+  end
+
+  def self.managed_groups
+    Settings.sync.groups.to_h.values.flatten
+  end
+
+  def self.groups_for(person)
+    Settings.sync.groups.map { |affiliation, groups|
+      groups if person.affiliations.include? affiliation.to_s
+    }.flatten.compact.uniq
   end
 
   private
@@ -125,7 +153,6 @@ class ADAccount
       edupersonaffiliation: affiliations,
       edupersonprimaryaffiliation: person.primary_affiliation,
       edupersonentitlement: entitlements,
-      # TODO: memberof
       employeetype: person.employee_type,
       title: person.title,
       url: photo_url,
@@ -187,9 +214,6 @@ class ADAccount
   end
 
   def entry
-    @entry ||= ldap { |l| l.search(filter: Net::LDAP::Filter.eq('cn', cn), base: Settings.ad.base).first }
+    @entry ||= ldap { |l| l.search(filter: Net::LDAP::Filter.eq('cn', cn), base: Settings.ad.users_ou).first }
   end
 end
-
-
-

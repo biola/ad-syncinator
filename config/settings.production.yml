@@ -19,3 +19,16 @@ trogdir:
   port: 443
   script_name: directory
   version: v1
+
+sync:
+  groups:
+    employee:
+      - CN=biolaemployees,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
+    faculty emeritus:
+      - CN=biolafacultyemeriti,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
+    student:
+      - CN=biolastudents,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
+    student worker:
+      - CN=biolastudentworkers,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
+    trustee:
+      - CN=biolatrustees,OU=Biola Security Groups,DC=ad,DC=biola,DC=edu
