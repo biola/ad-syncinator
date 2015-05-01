@@ -41,6 +41,10 @@ describe TrogdirChange do
     it { expect(subject.employee_type_changed?).to be false}
   end
 
+  describe '#affiliations_changed' do
+    it { expect(subject.affiliations_changed?).to be false}
+  end
+
   describe '#university_email_changed?' do
     it { expect(subject.university_email_changed?).to be false}
   end

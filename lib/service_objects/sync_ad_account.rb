@@ -14,6 +14,7 @@ module ServiceObjects
         change.title_changed? ||
         change.department_changed? ||
         change.employee_type_changed? ||
+        change.affiliations_changed? ||
         change.university_email_changed? ||
         change.office_phone_changed? ||
         change.biola_id_changed? ||
