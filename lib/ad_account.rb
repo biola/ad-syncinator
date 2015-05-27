@@ -100,7 +100,7 @@ class ADAccount
   end
 
   def self.disable?(person)
-    person.affiliations.none?
+    person.affiliations.blank?
   end
 
   def self.encode_password(password)
