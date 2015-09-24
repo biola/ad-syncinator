@@ -1,0 +1,24 @@
+# Logfile created on 2015-05-12 10:56:45 -0700 by logger.rb/47272
+I, [2015-05-12T10:56:45.072349 #4699]  INFO -- : [176b90ec4bf3b78eb160daa4] Starting job
+I, [2015-05-12T10:56:45.319444 #4699]  INFO -- : [176b90ec4bf3b78eb160daa4] Finished job
+I, [2015-05-12T11:00:12.633050 #4699]  INFO -- : [6a881cf7ad00f39f970aece0] Starting job
+I, [2015-05-12T11:00:12.881688 #4699]  INFO -- : [6a881cf7ad00f39f970aece0] Processing 1 changes
+I, [2015-05-12T11:00:12.882786 #4699]  INFO -- : [6a881cf7ad00f39f970aece0] Finished job
+I, [2015-05-12T11:00:12.887762 #4699]  INFO -- : Syncing AD account for person b915db57-5cdc-461c-930c-7dde14e5afd9
+I, [2015-05-12T11:00:12.890248 #4699]  INFO -- : [7c8306a6b8ec8b1feea15e22] Starting job
+I, [2015-05-12T11:00:13.139206 #4699]  INFO -- : [7c8306a6b8ec8b1feea15e22] Finished job
+I, [2015-05-12T11:00:19.375581 #4699]  INFO -- : [86a447b3c62439e32083d1b3] Starting job
+I, [2015-05-12T11:00:19.606053 #4699]  INFO -- : [86a447b3c62439e32083d1b3] Finished job
+I, [2015-05-12T11:03:17.300960 #5686]  INFO -- : [023b65c60dab4e4aec94c3fb] Starting job
+I, [2015-05-12T11:03:17.674075 #5686]  INFO -- : [023b65c60dab4e4aec94c3fb] Processing 2 changes
+I, [2015-05-12T11:03:17.677396 #5686]  INFO -- : [023b65c60dab4e4aec94c3fb] Finished job
+I, [2015-05-12T11:03:17.683583 #5686]  INFO -- : Syncing AD account for person b915db57-5cdc-461c-930c-7dde14e5afd9
+I, [2015-05-12T11:03:17.684004 #5686]  INFO -- : [598925b22cf13ffa09e2cf12] Starting job
+I, [2015-05-12T11:03:17.685929 #5686]  INFO -- : Syncing AD account for person b915db57-5cdc-461c-930c-7dde14e5afd9
+I, [2015-05-12T11:03:18.006245 #5686]  INFO -- : [598925b22cf13ffa09e2cf12] Finished job
+I, [2015-05-12T11:03:32.487577 #5686]  INFO -- : [1d4fbf2889ff72350b4cdebd] Starting job
+I, [2015-05-12T11:03:32.715021 #5686]  INFO -- : [1d4fbf2889ff72350b4cdebd] Processing 1 changes
+I, [2015-05-12T11:03:32.716379 #5686]  INFO -- : [1d4fbf2889ff72350b4cdebd] Finished job
+I, [2015-05-12T11:03:32.718910 #5686]  INFO -- : Syncing AD account for person b915db57-5cdc-461c-930c-7dde14e5afd9
+I, [2015-05-12T11:03:32.724160 #5686]  INFO -- : [65eb6fffaa18bceaa89accda] Starting job
+I, [2015-05-12T11:03:32.962227 #5686]  INFO -- : [65eb6fffaa18bceaa89accda] Finished job
