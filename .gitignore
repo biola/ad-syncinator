@@ -3,3 +3,4 @@
 /config/blazing.rb
 /vendor/bundle
 /tmp
+log/*.log
