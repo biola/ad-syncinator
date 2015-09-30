@@ -1,7 +1,5 @@
 module ADSyncinator
   def self.initialize!
-    require 'sidekiq'
-    require 'sidekiq-cron'
     env = ENV['RACK_ENV'] || ENV['RAILS_ENV'] || :development
     ENV['RACK_ENV'] ||= env.to_s
 
