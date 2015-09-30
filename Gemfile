@@ -8,7 +8,7 @@ gem 'net-ldap'
 gem 'rails_config', '~> 0.5.0.beta1'
 gem 'rake'
 gem 'sidekiq'
-gem 'sidetiq'
+gem 'sidekiq-cron'
 gem 'trogdir_api_client'
 
 group :development, :test do
