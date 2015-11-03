@@ -125,7 +125,7 @@ class ADAccount
   end
 
   def ldap_update_attributes(person)
-    display_name = [person.first_name, person.last_name].reject(&:blank?).join(' ')
+    display_name = [(person.preferred_name.presence || person.first_name), person.last_name].reject(&:blank?).join(' ')
     principal_name = person.university_email.to_s.split('@').first
     photo_url = person.profile_photo || person.id_card_photo
     enabled = !ADAccount.disable?(person)
@@ -158,7 +158,7 @@ class ADAccount
       url: photo_url,
       description: description,
       useraccountcontrol: user_account_control
-    }.reject { |key, val| val.nil? }
+    }
   end
 
   def ldap_create_attributes(person)
@@ -188,13 +188,12 @@ class ADAccount
     new_attrs = ldap_update_attributes(person)
 
     operations = new_attrs.each_with_object([]) do |(key, val), ops|
+      # Make sure that the new value isn't the value in LDAP
       if old_attrs[key] != Array(val)
-        if old_attrs[key].nil? && val.nil?
-          ops << [:add, key.to_sym, val]
-        elsif !old_attrs[key].nil? && val.nil?
+        if !old_attrs[key].nil? && val.nil?
           ops << [:delete, key.to_sym, nil]
         else
-          ops << [:replace, key.to_sym, val]
+          ops << [:replace, key.to_sym, val] # This will also add a new value
         end
       end
     end
