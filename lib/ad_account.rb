@@ -148,6 +148,7 @@ class ADAccount
       telephonenumber: person.office_phone,
       ipphone: person.office_phone,
       employeeid: person.biola_id.try(:to_s),
+      edupersonuniqueid: person.banner_udcid,
       edupersonprincipalname: principal_name,
       department: person.department,
       edupersonaffiliation: affiliations,

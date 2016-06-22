@@ -20,6 +20,10 @@ class TrogdirPerson
     get_value_from_nested_record(:ids, :netid, :identifier)
   end
 
+  def banner_udcid
+    get_value_from_nested_record(:ids, :banner_udcid, :identifier)
+  end
+
   def biola_id
     biola_id = get_value_from_nested_record(:ids, :biola_id, :identifier)
     biola_id.to_i unless biola_id.nil?
