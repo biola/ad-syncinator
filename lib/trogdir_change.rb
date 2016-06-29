@@ -33,6 +33,7 @@ class TrogdirChange
     office_phone: [:phone, :office],
     biola_id: [:id, :biola_id],
     netid: [:id, :netid],
+    banner_udcid: [:id, :banner_udcid],
     id_photo: [:photo, :id_card],
     profile_photo: [:photo, :profile]
   }.each do |meth, (scope, type)|

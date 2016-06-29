@@ -19,6 +19,7 @@ module ServiceObjects
         change.office_phone_changed? ||
         change.biola_id_changed? ||
         change.netid_changed? ||
+        change.banner_udcid_changed? ||
         change.id_photo_changed? ||
         change.profile_photo_changed?
       ))

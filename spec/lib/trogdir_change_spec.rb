@@ -61,6 +61,10 @@ describe TrogdirChange do
     it { expect(subject.netid_changed?).to be false}
   end
 
+  describe '#banner_udcid_changed?' do
+    it { expect(subject.banner_udcid_changed?).to be false}
+  end
+
   describe '#id_photo_changed?' do
     it { expect(subject.id_photo_changed?).to be false}
   end
