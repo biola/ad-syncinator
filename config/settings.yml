@@ -39,6 +39,7 @@ sync:
     - student worker
     - trustee
     - volunteer
+    - research fellow
   # Affiliations and which groups they should be added to.
   # These are defined in the environment settings files.
   # They have to be defined that way or the merge will merge the array values together.
