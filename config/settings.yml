@@ -8,7 +8,7 @@ ad:
   users_ou: OU=Biola Users,DC=adtest,DC=biola,DC=edu
   connection:
     # TODO: confirm settings with sysadmins
-    host: dcdev.adtest.biola.edu
+    host: dcdev2.adtest.biola.edu
     port: 636
     encryption: :simple_tls
     auth:
