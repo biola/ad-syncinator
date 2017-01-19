@@ -1,7 +1,7 @@
 class TrogdirPerson
   class TrogdirAPIError < StandardError; end
 
-  AFFILIATION_PRECEDENCE =['faculty', 'employee', 'volunteer', 'trustee', 'faculty emeritus', 'student worker', 'student', 'alumnus', 'accepted student']
+  AFFILIATION_PRECEDENCE =['faculty', 'employee', 'volunteer', 'research fellow', 'trustee', 'faculty emeritus', 'student worker', 'student', 'alumnus', 'accepted student']
 
   attr_reader :uuid
 

@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activesupport'
-gem 'blazing'
-gem 'logging', '~> 1.8' # 2.0 is not compatible with blazing
-# beta1 fixes this issue https://github.com/railsconfig/rails_config/pull/86
+gem 'api-auth', '1.3.2'
 gem 'net-ldap'
 gem 'rails_config', '~> 0.5.0.beta1'
 gem 'rake'
