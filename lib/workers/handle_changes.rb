@@ -9,10 +9,16 @@ module Workers
     def perform
       Log.info "[#{jid}] Starting job"
 
-      response = change_syncs.start.perform
-      raise TrogdirAPIError, response.parse['error'] unless response.success?
+      hashes = []
+      response = []
 
-      hashes = Array(response.parse)
+      loop do
+        response = change_syncs.start(limit: 10).perform
+        break if response.parse.blank?
+        raise TrogdirAPIError, response.parse['error'] unless response.success?
+
+        hashes += Array(response.parse)
+      end
 
       # Keep processing batches until we run out
       changes_processed = if hashes.any?
@@ -29,6 +35,9 @@ module Workers
       if changes_processed
         HandleChanges.perform_async
       end
+    rescue StandardError => error
+      Log.error "Error in HandleChanges: #{response}"
+      raise error
     end
 
     private
@@ -38,3 +47,4 @@ module Workers
     end
   end
 end
+
