@@ -10,7 +10,8 @@
     "preferred_name":"Bob"
   },
   "modified":{
-    "preferred_name":"B-dizzle"
+    "preferred_name":"B-dizzle",
+    "uuid":"4c8b009e-ccdc-4a12-b0d5-906ea091d869"
   },
   "all_attributes":{
     "_id":{

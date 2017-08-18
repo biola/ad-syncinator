@@ -74,7 +74,7 @@ class TrogdirPerson
   end
 
   def get_value_from_nested_record(collection, type, return_attr)
-    record = Array(hash[collection.to_s]).find { |record| record['type'] == type.to_s }
+    record = Array(hash[collection.to_s]).find { |rec| rec['type'] == type.to_s }
     record[return_attr.to_s] unless record.nil?
   end
 end

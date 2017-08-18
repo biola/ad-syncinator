@@ -2,11 +2,13 @@ module ServiceObjects
   class SyncADAccount < Base
     def call
       trogdir_person = TrogdirPerson.new(change.person_uuid)
-      ADAccount.new(trogdir_person.netid).create_or_update! trogdir_person
+      ad_account = ADAccount.new(trogdir_person.netid)
+      ad_account.create_or_update!(trogdir_person)
     end
 
     def ignore?
       !(change.has_netid? && (
+        change.uuid_changed? ||
         change.first_name_changed? ||
         change.middle_name_changed? ||
         change.last_name_changed? ||
