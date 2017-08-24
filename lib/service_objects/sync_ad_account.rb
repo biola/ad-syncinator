@@ -2,8 +2,7 @@ module ServiceObjects
   class SyncADAccount < Base
     def call
       trogdir_person = TrogdirPerson.new(change.person_uuid)
-      ad_account = ADAccount.new(trogdir_person.netid)
-      ad_account.create_or_update!(trogdir_person)
+      ADAccount.new(trogdir_person.netid).create_or_update!(trogdir_person)
     end
 
     def ignore?
