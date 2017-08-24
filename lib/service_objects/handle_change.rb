@@ -6,8 +6,7 @@ module ServiceObjects
       begin
         unless SyncADAccount.ignore?(change)
           Log.info "Syncing AD account for person #{change.person_uuid}"
-          sync_ad_account = SyncADAccount.new(change)
-          actions << sync_ad_account.call
+          actions << SyncADAccount.new(change).call
         end
 
         action = actions.first || :skip
