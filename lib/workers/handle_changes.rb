@@ -20,8 +20,9 @@ module Workers
 
           hashes += Array(response.parse)
         end
-      rescue StandardError
+      rescue StandardError => e
         Log.error "Error in HandleChanges: #{response}"
+        Log.error e.message
       end
 
 

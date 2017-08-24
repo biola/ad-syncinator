@@ -154,6 +154,7 @@ class ADAccount
       edupersonaffiliation: affiliations,
       edupersonprimaryaffiliation: person.primary_affiliation,
       edupersonentitlement: entitlements,
+      edupersontargetedid: person.uuid,
       employeetype: person.employee_type,
       title: person.title,
       url: photo_url,
@@ -188,7 +189,7 @@ class ADAccount
     old_attrs = attributes
     new_attrs = ldap_update_attributes(person)
 
-    operations = new_attrs.each_with_object([]) do |(key, val), ops|
+    new_attrs.each_with_object([]) do |(key, val), ops|
       # Make sure that the new value isn't the value in LDAP
       if old_attrs[key] != Array(val)
         if !old_attrs[key].nil? && val.nil?

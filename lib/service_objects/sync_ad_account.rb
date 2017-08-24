@@ -7,6 +7,7 @@ module ServiceObjects
 
     def ignore?
       !(change.has_netid? && (
+        change.uuid_changed? ||
         change.first_name_changed? ||
         change.middle_name_changed? ||
         change.last_name_changed? ||

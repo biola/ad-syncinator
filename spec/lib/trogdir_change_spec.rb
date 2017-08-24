@@ -13,6 +13,10 @@ describe TrogdirChange do
     it { expect(subject.person_uuid).to eql '00000000-0000-0000-0000-000000000000'}
   end
 
+  describe '#uuid_changed?' do
+    it { expect(subject.uuid_changed?).to be true}
+  end
+
   describe '#preferred_name_changed?' do
     it { expect(subject.preferred_name_changed?).to be true}
   end
