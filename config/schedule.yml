@@ -1,8 +1,10 @@
+---
+{}
 ##############################
 ########## Changes ###########
 ##############################
 
-HandleChanges:
-  cron: "55 * * * *"
-  class: "Workers::HandleChanges"
-  queue: default
+# HandleChanges:
+#   cron: "55 * * * *"
+#   class: "Workers::HandleChanges"
+#   queue: default
