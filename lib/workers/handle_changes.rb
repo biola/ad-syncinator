@@ -25,7 +25,6 @@ module Workers
         Log.error e.message
       end
 
-
       # Keep processing batches until we run out
       changes_processed = if hashes.any?
         Log.info "[#{jid}] Processing #{hashes.length} changes"
